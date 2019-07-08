@@ -1,5 +1,6 @@
 from django.db import models
 
+
 #creating a common table for all the devices like laptop,desktop, mobiles
 class Device(models.Model):
 	Type=models.CharField(max_length=100, blank=False)

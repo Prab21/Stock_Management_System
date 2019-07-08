@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+
+{% block body %}
+
+<div>
+	<h4>Editin items</h4>
+	<form method="POST">
+		<br>
+	{% csrf_token %}	
+		{% for field in form %}
+
+		<div class="form-group row">
+			<label for ="id_{{ field.name }}" class="col-2 col-form-label">{{ field.label }}</label>
+			<div class="col-10">
+				{{ field }}
+			</div>
+
+			<br>
+				
+		</div>
+		 
+		{% endfor %}
+		<button type="submit" class="btn btn-primary" name="button"> Edit Devices</button>
+		
+	</form>
+	<!--  <h4> {{ message }}</h4> -->
+</div>
+
+{% endblock %}

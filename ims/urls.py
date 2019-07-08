@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from inventory import views
+#from inventory import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index')
+    path('',include('inventory.urls'))
+
+]
+
+
+
+
+
+# path('',views.index,name='index'),
+    # path('',views.display_laptops,name='display_laptops'),
 
     #path('inventory/',include(inventory.urls)),
-]
