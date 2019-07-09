@@ -175,25 +175,26 @@ def edit_mobile(request,pk):
 
 def delete_laptop(request,pk):
 	Laptop.objects.filter(id=pk).delete()
-	item=Laptop.objects.all()
+	items=Laptop.objects.all()
 	context={
-		'items': items,
+	    'items': items,
 	}
 	return render(request,'index.html',context)
 
 def delete_desktop(request,pk):
 	Desktop.objects.filter(id=pk).delete()
-	item=Desktop.objects.all()
+	items=Desktop.objects.all()
 	context={
-		'items': items,
+	    'items': items,
 	}
 	return render(request,'index.html',context)
 
 def delete_mobile(request,pk):
 	Mobiles.objects.filter(id=pk).delete()
-	item=Mobiles.objects.all()
+	items=Mobiles.objects.all()
 	context={
-		'items': items,
+	    'items': items,
+		
 	}
 	return render(request,'index.html',context)
 

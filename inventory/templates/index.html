@@ -7,7 +7,7 @@
 {% block body %}
 <div class="button-group">
 
-	 <h1>Inventory Management System</h1>
+	 <h1>Stock Management System</h1>
       <h2>Purushottam Prabhakar </h2>
 	<a href="{% url 'display_laptops' %}" class="btn btn-primary btn-md" role="button">Laptop</a>
 	<a href="{% url 'add_laptop' %}" class="btn btn-warning btn-sm" role="button"> +</a>
@@ -30,6 +30,7 @@
 	 		<th>Model</th>
 	 		<th>Price</th>
 	 		<th>Status</th>
+	 		<th>Issues</th>
 	 	</tr>
 	 </thead>
 	 <tbody>
